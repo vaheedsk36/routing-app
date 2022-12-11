@@ -15,7 +15,7 @@ route.post('/accounts',(req,res)=>{
     res.json(accounts);
 })
 
-// Get request using a specific Id
+// Get request using a specific Id (routing parameter)
 
 route.get('/accounts/:Id',(req,res)=>{
     const accountId = Number(req.params.Id);
