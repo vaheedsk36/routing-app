@@ -25,4 +25,4 @@ let accounts = [
      }
  ];
 
- module.export = accounts;
+ module.exports = accounts;
