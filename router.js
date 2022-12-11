@@ -15,4 +15,19 @@ route.post('/accounts',(req,res)=>{
     res.json(accounts);
 })
 
+// Get request using a specific Id
+
+route.get('/accounts/:Id',(req,res)=>{
+    const accountId = Number(req.params.Id);
+    const getAccount = accounts.find((account)=>account.Id === accountId);
+    
+    if(!getAccount){
+        res.status(500).send("Account not found");
+    }else{
+        res.json({userData:[getAccount]})
+    }
+
+    
+})
+
 module.exports = route;
